@@ -16,7 +16,7 @@ const Testimonials = () => {
     {
       id: 2,
       image: avatar2,
-      name: "Jack Smith",
+      name: "Jack Morrison",
       job: "Bodybuilder",
       quote: "Muscles are sculpted not just in the gym, but in the mind's relentless pursuit of progress. Embrace the challenge of each lift, for it's in the struggle that true growth occurs. Remember, it's not just about building the body, but also strengthening the spirit."
     },
@@ -29,7 +29,7 @@ const Testimonials = () => {
     }
   ];
 
-  const [selectedTestimonial, setSelectedTestimonial] = useState(null);
+  const [selectedTestimonial, setSelectedTestimonial] = useState(1); // Set initial state to 1
 
   const handleNextTestimonial = () => {
     setSelectedTestimonial(prev => {
@@ -53,12 +53,12 @@ const Testimonials = () => {
 
   return (
     <div className="max-w-6xl mt-20 mx-auto relative">
-      <h2 className="text-xl text-white font-semibold mb-10">Testimonials</h2>
+      <h2 className="text-xl text-white font-semibold mb-2">Testimonials</h2>
       <div className="flex items-center">
         {testimonialsData.map(testimonial => (
           <div key={testimonial.id} className="inline-block mr-8 relative">
             <div className="testimonial-container relative">
-              <img src={testimonial.image} alt={testimonial.name} className={`w-56 h-28 rounded-full mb-2 cursor-pointer ${selectedTestimonial === testimonial.id && 'border-2 border-red-400'}`} onClick={() => setSelectedTestimonial(testimonial.id)} />
+              <img src={testimonial.image} alt={testimonial.name} className={`w-44 h-32 rounded-full mb-2 cursor-pointer ${selectedTestimonial === testimonial.id && 'border-2 border-red-400'}`} onClick={() => setSelectedTestimonial(testimonial.id)} />
               {selectedTestimonial === testimonial.id && (
                 <FaQuoteRight className="absolute -bottom-3 -right-2 text-red-800 text-4xl" />
               )}
@@ -73,7 +73,7 @@ const Testimonials = () => {
         ))}
         <div className=" text-white text-lg text-left mt-10">
           {selectedTestimonial !== null && (
-            <p className="italic">{testimonialsData[selectedTestimonial - 1].quote}</p>
+            <p className="italic" style={{ width: '600px',marginLeft: "100px" }}>{testimonialsData[selectedTestimonial - 1].quote}</p>
           )}
           <div className="flex items-center mt-20 ml-72">
             <button onClick={handlePrevTestimonial} className="mr-2 text-gray-500">
