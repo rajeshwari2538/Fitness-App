@@ -1,0 +1,61 @@
+body {
+  background-color: rgb(9 9 11);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.nav-link {
+  position: relative;
+  padding-bottom: 8px;
+  color: white; 
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: transparent; 
+  transition: width 0.3s ease, background-color 0.3s ease; 
+}
+
+.nav-link:hover::after {
+  width: 100%; 
+  background-color: red; 
+}
+
+.nav-link.active {
+  color: white; 
+  border-bottom: 2px solid red; 
+}
+
+.animate-slide {
+  animation-duration: 3s; 
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-15%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+.image-container img {
+  animation-name: slideIn;
+}
+
+
