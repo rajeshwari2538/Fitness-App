@@ -1,5 +1,6 @@
 import React from 'react';
 import { IoMdFitness } from "react-icons/io";
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
@@ -10,19 +11,19 @@ const Navbar = () => {
       </div>
       <ul className="flex space-x-8 justify-center"> 
         <li>
-          <a href="#" className="nav-link active">Home</a> 
+          <Link to="/" className="nav-link active">Home</Link> 
         </li>
         <li>
-          <a href="#" className="nav-link">About</a>
+          <Link to="/about" className="nav-link">About</Link>
         </li>
         <li>
-          <a href="#" className="nav-link">Gallery</a>
+          <Link to="/gallery" className="nav-link">Gallery</Link>
         </li>
         <li>
-          <a href="#" className="nav-link">Plans</a>
+          <Link to="/plans" className="nav-link">Plans</Link>
         </li>
         <li>
-          <a href="#" className="nav-link">Trainers</a>
+          <Link to="/trainers" className="nav-link">Trainers</Link>
         </li>
       </ul>
       <div className="mr-20"> 

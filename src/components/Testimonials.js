@@ -53,7 +53,6 @@ const Testimonials = () => {
 
   return (
     <div className="max-w-6xl mt-20 mx-auto relative">
-      <h2 className="text-xl text-white font-semibold mb-2">Testimonials</h2>
       <div className="flex items-center">
         {testimonialsData.map(testimonial => (
           <div key={testimonial.id} className="inline-block mr-8 relative">
@@ -71,15 +70,15 @@ const Testimonials = () => {
             </div>
           </div>
         ))}
-        <div className=" text-white text-lg text-left mt-10">
+        <div className=" text-white text-lg text-left mt-28">
           {selectedTestimonial !== null && (
             <p className="italic" style={{ width: '600px',marginLeft: "100px" }}>{testimonialsData[selectedTestimonial - 1].quote}</p>
           )}
-          <div className="flex items-center mt-20 ml-72">
-            <button onClick={handlePrevTestimonial} className="mr-2 text-gray-500">
+          <div className="flex items-center mt-20 ml-[6.2rem]">
+            <button onClick={handlePrevTestimonial} className="mr-2 border rounded-full p-4 text-gray-500">
               <FaArrowLeft />
             </button>
-            <button onClick={handleNextTestimonial} className="text-gray-500">
+            <button onClick={handleNextTestimonial} className="text-gray-500 border rounded-full p-4">
               <FaArrowRight />
             </button>
           </div>
