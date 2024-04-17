@@ -42,14 +42,6 @@ const FAQ = () => {
 
   return (
     <div className="max-w-6xl mt-20 mx-auto">
-      <div className="mb-4">
-        <p className="font-semibold text-white text-xl">
-          MOTIVATION FOR YOU
-        </p>
-        <p className='text-gray-700 font-bold mt-6 mb-16 text-7xl'>
-          Strength lies not in what you can do, but in overcoming what you cannot do.
-        </p>
-      </div>
       <div className="grid gap-4 grid-cols-1 sm:grid-cols-2">
         <div className="col-span-2 mb-4">
           <h2 className="text-xl text-white font-semibold mb-2">Frequently Asked Questions</h2>

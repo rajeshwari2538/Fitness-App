@@ -57,7 +57,7 @@ const Services = () => {
     arrows: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 4,
+    slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 5000,
@@ -88,8 +88,8 @@ const Services = () => {
       <h2 className="md:text-2xl text-white font-bold mb-8">FEATURED SERVICES</h2>
       <div className="">
         <div className='flex justify-between'>
-          <h3 className="text-6xl text-white font-bold mb-2">Our Classes</h3>
-          <p className="text-gray-400 ml-80 text-xl">Highlights a variety of premium fitness options, ranging from cardio workouts and TRX training to weight lifting, rowing, and indoor cycling classes.</p>
+          <h3 className="text-5xl text-white font-bold mb-2">Our Classes</h3>
+          <p className="text-zinc-600 ml-80 text-xl">Highlights a variety of premium fitness options, ranging from cardio workouts and TRX training to weight lifting, rowing, and indoor cycling classes.</p>
         </div>
       </div>
       <Slider ref={sliderRef} {...settings}>
@@ -103,6 +103,14 @@ const Services = () => {
           </div>
         ))}
       </Slider>
+      <div className="mt-16">
+        <p className="font-semibold text-white text-xl">
+          MOTIVATION FOR YOU
+        </p>
+        <p className='text-zinc-800 font-bold mt-6 mb-16 text-7xl'>
+          Strength lies not in what you can do, but in overcoming what you cannot do.
+        </p>
+      </div>
     </div>
   );
 };

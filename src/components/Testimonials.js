@@ -52,7 +52,7 @@ const Testimonials = () => {
   };
 
   return (
-    <div className="max-w-6xl mt-20 mx-auto relative">
+    <div className="max-w-6xl mt-6 mx-auto relative">
       <div className="flex items-center">
         {testimonialsData.map(testimonial => (
           <div key={testimonial.id} className="inline-block mr-8 relative">

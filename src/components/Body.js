@@ -1,8 +1,8 @@
 import React from 'react';
 import Home from './Home';
 import Services from './Services';
-import FAQ from './FAQ';
 import Testimonials from './Testimonials';
+import Journey from './Journey';
 
 
 const Body = () => {
@@ -10,7 +10,7 @@ const Body = () => {
     <div>
       <Home />
       <Services />
-      <FAQ />
+      <Journey />
       <Testimonials />
     </div>
   )
