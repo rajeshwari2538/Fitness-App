@@ -3,6 +3,7 @@ import Home from './Home';
 import Services from './Services';
 import Testimonials from './Testimonials';
 import Journey from './Journey';
+import Empower from './Empower';
 
 
 const Body = () => {
@@ -12,6 +13,7 @@ const Body = () => {
       <Services />
       <Journey />
       <Testimonials />
+      <Empower/>
     </div>
   )
 }
