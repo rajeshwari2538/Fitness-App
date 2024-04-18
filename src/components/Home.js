@@ -38,7 +38,7 @@ const Home = () => {
   };
 
   return (
-    <div className="flex justify-between items-center h-screen">
+    <div className="max-w-6xl mx-auto flex justify-between items-center h-screen">
       <div className="flex flex-col md:flex-row justify-center items-start">
         <div className="flex flex-col items-center md:mr-10">
           {images.map((image, index) => (

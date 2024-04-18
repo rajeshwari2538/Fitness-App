@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa"; // Import arrow icons
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import image1 from '../assets/about/image1.jpg';
 import image2 from '../assets/about/image2.jpg';
 import image3 from '../assets/about/image3.jpg';

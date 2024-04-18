@@ -17,6 +17,7 @@ code {
   position: relative;
   padding-bottom: 8px;
   color: white; 
+  
 }
 
 .nav-link::after {
@@ -38,6 +39,35 @@ code {
 .nav-link.active {
   color: white; 
   border-bottom: 2px solid red; 
+}
+
+/* Styles for sidebar links */
+.sidebar-nav-link {
+  position: relative;
+  left: 45%;
+  padding-bottom: 8px;
+  color: #6B7280; 
+}
+
+.sidebar-nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: transparent; 
+  transition: width 0.3s ease, background-color 0.3s ease; 
+}
+
+.sidebar-nav-link:hover::after {
+  width: 100%; 
+  background-color: #6B7280; 
+}
+
+.sidebar-nav-link.active {
+  color: white; 
+  border-bottom: none; 
 }
 
 .animate-slide {
