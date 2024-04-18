@@ -6,7 +6,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 const Navbar = () => {
   const [showSidebar, setShowSidebar] = useState(false);
   const [activeLink, setActiveLink] = useState('home');
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768); // Track mobile view
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768); 
 
   useEffect(() => {
     const handleResize = () => {
@@ -18,7 +18,7 @@ const Navbar = () => {
     return () => {
       window.removeEventListener('resize', handleResize);
     };
-  }, []); // Add empty dependency array to run effect only once
+  }, []); 
 
   useEffect(() => {
     if (showSidebar) {
