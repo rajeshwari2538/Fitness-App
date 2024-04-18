@@ -4,6 +4,7 @@ import Services from './Services';
 import Testimonials from './Testimonials';
 import Journey from './Journey';
 import Empower from './Empower';
+import Team from './Team';
 
 
 const Body = () => {
@@ -14,6 +15,7 @@ const Body = () => {
       <Journey />
       <Testimonials />
       <Empower/>
+      <Team />
     </div>
   )
 }
