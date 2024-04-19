@@ -84,7 +84,7 @@ const Services = () => {
   };
 
   return (
-    <div className="max-w-6xl mx-auto px-6 md:px-0">
+    <div className="services max-w-6xl mx-auto px-6 md:px-0">
       <h2 className="md:text-2xl text-white font-bold mb-8">FEATURED SERVICES</h2>
       <div className="">
         <div className='flex justify-between'>

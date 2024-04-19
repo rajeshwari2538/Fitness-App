@@ -1,11 +1,11 @@
+
+
+
 body {
   background-color: rgb(9 9 11);
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
 
 @tailwind base;
 @tailwind components;
@@ -70,22 +70,19 @@ code {
   border-bottom: none; 
 }
 
-.animate-slide {
-  animation-duration: 3s; 
-  animation-timing-function: ease-in-out;
+.animated-image {
+  animation: scale-up-hor-right 0.5s ease forwards;
 }
 
-@keyframes slideIn {
-  from {
-    transform: translateX(-15%);
+@keyframes scale-up-hor-right {
+  0% {
+    transform: scaleX(0.4);
+    transform-origin: 100% 100%;
   }
-  to {
-    transform: translateX(0%);
+  100% {
+    transform: scaleX(1);
+    transform-origin: 100% 100%;
   }
-}
-
-.image-container img {
-  animation-name: slideIn;
 }
 
 
