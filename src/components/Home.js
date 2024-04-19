@@ -39,7 +39,7 @@ const Home = () => {
     setCurrentImage(index);
   };
 
-  const isSmallDevice = window.innerWidth < 768; // Assuming small devices have width less than 768px
+  const isSmallDevice = window.innerWidth < 768; 
 
   return (
     <div className="max-w-6xl mx-auto -mt-[52%] md:-mt-10 flex justify-between items-center h-screen">
@@ -61,7 +61,7 @@ const Home = () => {
               key={images[currentImage].id}
               src={images[currentImage].image}
               alt={`Image ${currentImage + 1}`}
-              className="w-full h-auto rounded-md shadow-md animated-image" // Add animated-image class
+              className="w-full h-auto rounded-md shadow-md animated-image" 
             />
             <h1 className={`absolute -bottom-16 left-4 md:top-10 md:left-[75%] text-3xl md:text-9xl text-white font-bold font-mono z-10 ${isSmallDevice ? 'mt-4 text-center w-full' : ''}`} style={{ lineHeight: isSmallDevice ? '1.2' : '0.9', maxWidth: isSmallDevice ? '250px' : 'none' }}>{images[currentImage].title}</h1>
           </div>

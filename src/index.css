@@ -1,6 +1,4 @@
 
-
-
 body {
   background-color: rgb(9 9 11);
 
@@ -10,7 +8,6 @@ body {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 
 
 .nav-link {
@@ -70,6 +67,7 @@ body {
   border-bottom: none; 
 }
 
+/* home */
 .animated-image {
   animation: scale-up-hor-right 0.5s ease forwards;
 }
