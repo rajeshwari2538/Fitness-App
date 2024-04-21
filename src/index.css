@@ -1,7 +1,5 @@
-
-body {
-  background-color: rgb(9 9 11);
-
+body{
+  background-color: #171717;
 }
 
 
@@ -82,6 +80,3 @@ body {
     transform-origin: 100% 100%;
   }
 }
-
-
-

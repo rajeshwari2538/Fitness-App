@@ -63,51 +63,52 @@ const Services = () => {
     autoplaySpeed: 5000,
     responsive: [
       {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 4,
-        }
-      },
-      {
         breakpoint: 768,
         settings: {
           slidesToShow: 3,
+          slidesToScroll: 1,
         }
       },
       {
         breakpoint: 640,
         settings: {
           slidesToShow: 2,
+          slidesToScroll: 1,
         }
       }
     ]
   };
 
+  const isSmallDevice = window.innerWidth < 768; 
+
   return (
-    <div className="services max-w-6xl mx-auto px-6 md:px-0">
-      <h2 className="md:text-2xl text-white font-bold mb-8">FEATURED SERVICES</h2>
+    <div className="services max-w-6xl mx-auto px-6 mt-0 md:px-0">
+      <h2 className="md:text-xl text-white font-bold mb-2">FEATURED SERVICES</h2>
       <div className="">
-        <div className='flex justify-between'>
-          <h3 className="text-5xl text-white font-bold mb-2">Our Classes</h3>
-          <p className="text-zinc-600 ml-80 text-xl">Highlights a variety of premium fitness options, ranging from cardio workouts and TRX training to weight lifting, rowing, and indoor cycling classes.</p>
+        <div className='flex flex-col md:flex-row md:items-center'>
+          <h3 className="md:text-6xl text-4xl text-white font-bold mb-2 md:mr-8">Our Classes</h3>
+          <p className="text-neutral-600 md:text-xl mt-2 text-lg md:mb-0">Highlights a variety of premium fitness options, ranging from cardio workouts and TRX training to weight lifting, rowing, and indoor cycling classes.</p>
         </div>
       </div>
       <Slider ref={sliderRef} {...settings}>
         {services.map((service) => (
           <div key={service.id} className="mt-6 p-4 relative">
-            <img src={service.image} alt={service.title} className="w-96 h-auto object-cover rounded-md transition-transform duration-500 hover:scale-105" />
-            <div className="absolute bottom-0 left-0 right-0 text-white px-8 py-10 rounded-b-md">
-              <h3 className="text-xl font-bold mb-2">{service.title}</h3>
-              <p className="text-sm">{service.description}</p>
-            </div>
+            <img src={service.image} alt={service.title} className="w-full h-auto object-cover rounded-md transition-transform duration-500 hover:scale-105" />
+              <div className="absolute bottom-0 left-0 right-0 text-white px-5 py-6 md:px-8 md:py-10 rounded-b-md">
+                <h3 className="text-xl md:text-2xl font-bold mb-2">{service.title}</h3>
+                {isSmallDevice ? null : (
+                <p className="text-sm md:text-md">{service.description}</p>
+                )}
+              </div>
+           
           </div>
         ))}
       </Slider>
-      <div className="mt-16">
-        <p className="font-semibold text-white text-xl">
+      <div className="md:mt-16 mt-5">
+        <p className="font-semibold text-white text-md md:text-xl">
           MOTIVATION FOR YOU
         </p>
-        <p className='text-zinc-800 font-bold mt-6 mb-16 text-7xl'>
+        <p className='text-neutral-700 font-bold mt-3 mb-16 text-4xl md:text-7xl'>
           Strength lies not in what you can do, but in overcoming what you cannot do.
         </p>
       </div>

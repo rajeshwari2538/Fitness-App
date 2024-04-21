@@ -61,7 +61,7 @@ const Home = () => {
               key={images[currentImage].id}
               src={images[currentImage].image}
               alt={`Image ${currentImage + 1}`}
-              className="w-full h-auto rounded-md shadow-md animated-image" 
+              className="w-[90%] mx-auto md:w-full h-auto rounded-md shadow-md animated-image" 
             />
             <h1 className={`absolute -bottom-16 left-4 md:top-10 md:left-[75%] text-3xl md:text-9xl text-white font-bold font-mono z-10 ${isSmallDevice ? 'mt-4 text-center w-full' : ''}`} style={{ lineHeight: isSmallDevice ? '1.2' : '0.9', maxWidth: isSmallDevice ? '250px' : 'none' }}>{images[currentImage].title}</h1>
           </div>

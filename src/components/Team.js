@@ -66,14 +66,14 @@ const Team = () => {
 
   return (
     <div className="max-w-6xl cursor-pointer mt-20 mx-auto py-12 px-4 sm:px-6 lg:px-8">
-      <div className="grid grid-cols-4 gap-4">
+      <div className="grid md:grid-cols-4 grid-cols-2 md:gap-4">
         {firstRow.map((trainer, index) => (
           <div key={index} className="relative">
-            <img src={trainer.image} alt={trainer.name} className="w-full h-[22rem]" />
+            <img src={trainer.image} alt={trainer.name} className="w-full h-[252px] md:h-[22rem]" />
             <div className="absolute inset-0 flex items-end gap-2 justify-start p-4 bg-black bg-opacity-50 transition duration-300 ease-in-out opacity-0 hover:opacity-100">
               <div>
-                <p className="text-white font-bold text-3xl">{trainer.name}</p>
-                <p className="text-white text-lg ">{trainer.job}</p>
+                <p className="text-white font-bold text-2xl md:text-3xl">{trainer.name}</p>
+                <p className="text-white text-sm md:text-lg ">{trainer.job}</p>
                 <div className="mt-2 absolute top-0 right-4 gap-8 flex flex-col text-white text-xl">
                   {trainer.instagram && <a href={trainer.instagram} target="_blank" rel="noopener noreferrer" className=''><FaInstagram /></a>}
                   {trainer.facebook && <a href={trainer.facebook} target="_blank" rel="noopener noreferrer" className=''><FaFacebook /></a>}
@@ -84,14 +84,14 @@ const Team = () => {
           </div>
         ))}
       </div>
-      <div className="grid grid-cols-4 gap-4 mt-6">
+      <div className="grid md:grid-cols-4 grid-cols-2 md:gap-4 md:mt-6">
         {secondRow.map((trainer, index) => (
           <div key={index} className="relative col-span-1">
-            <img src={trainer.image} alt={trainer.name} className="w-full h-[22rem]" />
+            <img src={trainer.image} alt={trainer.name} className="w-full h-[252px] md:h-[22rem]" />
             <div className="absolute inset-0 flex items-end justify-start p-4 bg-black bg-opacity-50 transition duration-300 ease-in-out opacity-0 hover:opacity-100">
               <div>
-                <p className="text-white font-bold text-3xl">{trainer.name}</p>
-                <p className="text-white text-lg">{trainer.job}</p>
+                <p className="text-white font-bold text-2xl md:text-3xl">{trainer.name}</p>
+                <p className="text-white text-sm md:text-lg">{trainer.job}</p>
                 <div className="mt-2 absolute top-0 right-4 gap-8 flex flex-col text-white text-xl">
                   {trainer.instagram && <a href={trainer.instagram} target="_blank" rel="noopener noreferrer" className='text-white'><FaInstagram /></a>}
                   {trainer.facebook && <a href={trainer.facebook} target="_blank" rel="noopener noreferrer" className='text-white'><FaFacebook /></a>}
@@ -102,8 +102,8 @@ const Team = () => {
           </div>
         ))}
         <Link to="/trainers">
-          <div className="mt-16 ml-44">
-           <button className="border border-zinc-700 hover:text-red-500 hover:border-red-500 text-white font-semibold py-20 text-2xl px-[5.2rem] rounded-full">Our Team</button>
+          <div className="md:mt-16 mt-10 ml-40 md:ml-44">
+           <button className="border border-neutral-700 hover:text-red-500 hover:border-red-500 text-white font-semibold py-10 px-10 md:py-20 text-2xl md:px-[5.2rem] rounded-full">Our Team</button>
           </div>
         </Link>
       </div>
@@ -111,4 +111,4 @@ const Team = () => {
   );
 };
 
-export default Team;
+export default Team;  

@@ -101,16 +101,16 @@ const Trainers = () => {
   ];
 
   return (
-    <div className="max-w-6xl mt-10 mx-auto py-12 px-4 sm:px-6 lg:px-8">
-      <h2 className="text-4xl text-white font-bold text-center mb-12 mt-10">Our Team</h2>
-      <div className="grid grid-cols-4 gap-4">
+    <div className="max-w-6xl md:mt-0 mx-auto py-12 px-4 sm:px-6 lg:px-8">
+      <h2 className="md:text-4xl text-3xl text-center text-white font-bold mb-12 -mt-4 md:mt-12">Our Team</h2>
+      <div className="grid grid-cols-2 md:grid-cols-4 md:gap-4">
         {trainers.map((trainer, index) => (
           <div key={index} className="relative">
-            <img src={trainer.image} alt={trainer.name} className="w-full h-[22rem]" />
+            <img src={trainer.image} alt={trainer.name} className="w-full h-[252px] md:h-[22rem]" />
             <div className="absolute inset-0 flex items-end gap-2 justify-start p-4 bg-black bg-opacity-50 transition duration-300 ease-in-out opacity-0 hover:opacity-100">
               <div>
-                <p className="text-white font-bold text-3xl">{trainer.name}</p>
-                <p className="text-white text-lg ">{trainer.job}</p>
+                <p className="text-white font-bold text-2xl md:text-3xl">{trainer.name}</p>
+                <p className="text-white text-sm md:text-lg ">{trainer.job}</p>
                 <div className="mt-2 absolute top-0 right-4 gap-8 flex flex-col text-white text-xl">
                   {trainer.instagram && <a href={trainer.instagram} target="_blank" rel="noopener noreferrer" className=''><FaInstagram /></a>}
                   {trainer.facebook && <a href={trainer.facebook} target="_blank" rel="noopener noreferrer" className=''><FaFacebook /></a>}
@@ -122,29 +122,33 @@ const Trainers = () => {
         ))}
       </div>
       <Empower />
-      <div className="flex justify-between mt-20">
+      <div className="flex justify-between md:mt-6">
         <div className="w-[100%] mt-20">
-          <h2 className="text-xl text-white font-bold mb-6">MEET OUR COACHES</h2>
-          <h2 className="text-7xl font-bold text-white mb-12">Champion Instructors</h2>
-          <p className="text-zinc-500 leading-snug text-xl">Renowned in the realm of combat sports, these champions are revered for their expertise as fight instructors and kickboxing trainers. Their illustrious journeys are defined by a mastery of technique, unwavering dedication, and an unyielding spirit. Serving as beacons of inspiration, they impart invaluable knowledge and embody the pinnacle of excellence in the arena, motivating aspiring fighters worldwide to pursue their dreams with passion and determination.</p>
-          <div className="flex justify-evenly mt-10 cursor-pointer">
-            {championInstructors.map((champion, index) => (
-              <div key={index} className="relative" style={{ width: 'calc(50% - 2rem)' }}>
-                <img src={champion.image} alt={champion.name} className={`w-full h-full mt-30 ${index === 1 ? 'mt-20' : ''}`} />
-                <div className={`w-full h-full absolute inset-0 flex items-end gap-2 ${index === 1 ? 'mt-20' : ''} justify-start p-4 bg-black bg-opacity-50 transition duration-300 ease-in-out opacity-0 hover:opacity-100`}>
-                  <div>
-                    <div className="mt-2 absolute top-[45%] right-[35%] gap-8 flex text-white text-4xl">
-                      {champion.instagram && <a href={champion.instagram} target="_blank" rel="noopener noreferrer" className='text-white'><FaInstagram /></a>}
-                      {champion.facebook && <a href={champion.facebook} target="_blank" rel="noopener noreferrer" className='text-white'><FaFacebook /></a>}
-                      {champion.twitter && <a href={champion.twitter} target="_blank" rel="noopener noreferrer" className='text-white'><FaTwitter /></a>}
-                    </div>
-                  </div>
-                </div>
-                <p className="text-white font-bold text-4xl mt-6">{champion.name}</p>
-                <p className="text-zinc-600 text-2xl mt-4">{champion.job}</p>
-              </div>
-            ))}
+          <h2 className="md:text-xl text-white font-semibold mb-1 md:mb-6">MEET OUR COACHES</h2>
+          <h2 className="text-4xl md:text-7xl font-bold text-white mb-6 md:mb-12">Champion Instructors</h2>
+          <p className="text-neutral-600 leading-snug text-lg md:text-xl">Renowned in the realm of combat sports, these champions are revered for their expertise as fight instructors and kickboxing trainers. Their illustrious journeys are defined by a mastery of technique, unwavering dedication, and an unyielding spirit. Serving as beacons of inspiration, they impart invaluable knowledge and embody the pinnacle of excellence in the arena, motivating aspiring fighters worldwide to pursue their dreams with passion and determination.</p>
+          <div className="flex flex-col mx-2 md:flex-row md:justify-evenly md:mt-10 mt-20 cursor-pointer">
+  {championInstructors.map((champion, index) => (
+    <div key={index} className={`relative md:w-[45%] h-[500px] md:h-full`} >
+      <img 
+        src={champion.image} 
+        alt={champion.name} 
+        className={`w-full h-full object-cover ${index === 1 ? 'mt-32' : ''} md:mt-30 md:w-auto md:h-auto`} 
+      />
+      <div className={`w-full h-full absolute inset-0 flex items-end gap-2 ${index === 1 ? 'mt-32' : ''} justify-start p-4 bg-black bg-opacity-50 transition duration-300 ease-in-out opacity-0 hover:opacity-100`}>
+        <div>
+          <div className="mt-2 absolute top-[45%] right-[35%] gap-8 flex text-white text-2xl md:text-4xl">
+            {champion.instagram && <a href={champion.instagram} target="_blank" rel="noopener noreferrer" className='text-white'><FaInstagram /></a>}
+            {champion.facebook && <a href={champion.facebook} target="_blank" rel="noopener noreferrer" className='text-white'><FaFacebook /></a>}
+            {champion.twitter && <a href={champion.twitter} target="_blank" rel="noopener noreferrer" className='text-white'><FaTwitter /></a>}
           </div>
+        </div>
+        </div>
+         <p className="text-white font-bold text-3xl md:text-4xl mt-6">{champion.name}</p>
+         <p className="text-neutral-600 text-xl md:text-2xl mt-1 md:mt-4">{champion.job}</p>
+         </div>
+         ))}
+         </div>
         </div>
       </div>
     </div>

@@ -49,8 +49,8 @@ const Navbar = () => {
 
   return (
     <div>
-      <nav className="bg-zinc-950 text-white py-6 flex justify-between items-center h-20 relative">
-        <div className="ml-4 md:ml-20 flex">
+      <nav className="bg-neutral-900 text-white py-6 flex justify-between items-center h-20 relative">
+        <div className="ml-6 md:ml-20 flex">
           <p className='font-bold text-2xl md:text-3xl'>FitClub</p>  
           <span className='text-3xl md:text-4xl'><IoMdFitness /></span>
         </div>
@@ -61,7 +61,7 @@ const Navbar = () => {
                Close <span className='font-semibold text-white text-lg'>X</span>
               </button>
             ) : (
-              <button onClick={toggleSidebar} className="text-white">
+              <button onClick={toggleSidebar} className="text-white text-2xl mr-5">
                 <GiHamburgerMenu />
               </button>
             )}

@@ -9,13 +9,13 @@ import Team from './Team';
 
 const Body = () => {
   return (
-    <div>
+    <div className=''>
       <Home />
       <Services />
       <Journey />
-      <Testimonials />
       <Empower/>
       <Team />
+      <Testimonials />
     </div>
   )
 }
