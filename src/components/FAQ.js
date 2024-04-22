@@ -13,7 +13,7 @@ const FAQ = () => {
       <h2 className="text-xl text-white font-semibold mb-4">Frequently Asked Questions</h2>
       <div className="grid gap-4 md:grid-cols-2">
         {faqs.map((faq) => (
-          <div key={faq.id} className="text-neutral-500 border border-neutral-700 rounded-lg p-4 cursor-pointer" onClick={() => toggleFAQ(faq.id)}>
+          <div key={faq.id} className="text-neutral-400 border border-neutral-600 rounded-lg p-4 cursor-pointer" onClick={() => toggleFAQ(faq.id)}>
             <div className="flex justify-between items-center">
               <div className="font-semibold">{faq.question}</div>
               <div className='text-[2rem] font-bold'>{openId === faq.id ? '-' : '+'}</div>

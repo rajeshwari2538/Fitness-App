@@ -27,7 +27,7 @@ const Journey = () => {
         <div className="flex flex-col justify-center text-white md:ml-12">
           <h2 className="text-md md:text-xl font-bold mb-1 md:mb-4">DISCOVER THE FITCLUB</h2>
           <p className="text-4xl md:text-5xl font-semibold md:text-left">More than a fitness centre</p>
-          <p className="text-lg text-neutral-600 md:text-xl mt-6 md:mt-12 md:text-left">
+          <p className="text-lg text-neutral-400 md:text-xl mt-6 md:mt-12 md:text-left">
             Discover the FitClub isn't just another gym; it's your partner in fitness excellence. With cutting-edge facilities and a vibrant community, we're here to help you smash your fitness goals and enjoy the journey along the way. Join us and discover a new level of energy, motivation, and results!
           </p>
           <div className="grid grid-cols-2 gap-6 md:grid-cols-2 mt-12 md:mt-40">

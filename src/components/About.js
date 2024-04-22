@@ -34,7 +34,7 @@ const About = () => {
         <div className="w-full md:w-1/2 pr-8">
           <h3 className="md:text-xl text-white font-semibold mb-2 md:mb-4">A NAME YOU CAN TRUST</h3>
           <p className="text-white font-semibold text-3xl md:text-5xl mb-5 md:mb-8">Emily’s program is more than gym training.</p>
-          <p className='text-neutral-600 text-justify text-lg md:text-xl'>"Emily’s program transcends traditional gym training, offering a holistic approach to fitness and wellness. Through personalized guidance and comprehensive support, participants embark on a transformative journey towards improved physical health and overall well-being."</p>
+          <p className='text-neutral-400 text-justify text-lg md:text-xl'>"Emily’s program transcends traditional gym training, offering a holistic approach to fitness and wellness. Through personalized guidance and comprehensive support, participants embark on a transformative journey towards improved physical health and overall well-being."</p>
           <img className='h-[380px] object-cover w-full md:h-full mt-8' src={require('../assets/about/about2.jpg')} alt="about" />
         </div>
         <div className="md:w-1/2 w-full pl-8 md:pl-0 flex justify-end">
@@ -43,7 +43,7 @@ const About = () => {
       </div>
       <Empower />
       <div className="mt-10 mb-8 flex justify-center items-center overflow-x-auto">
-        <FaArrowLeft className="text-neutral-600 text-4xl md:text-5xl border border-neutral-600 rounded-full p-3 cursor-pointer" onClick={goToPreviousImages} />
+        <FaArrowLeft className="text-neutral-400 text-4xl md:text-5xl border border-neutral-600 rounded-full p-3 cursor-pointer" onClick={goToPreviousImages} />
         <div className="flex flex-wrap justify-center gap-4 md:gap-8 py-4 md:py-6">
           {aboutData.slice(startIndex, startIndex + (window.innerWidth > 768 ? 3 : 2)).map((data, index) => (
             <div key={index} className="flex flex-col items-center">
@@ -52,7 +52,7 @@ const About = () => {
             </div>
           ))}
         </div>
-        <FaArrowRight className="text-neutral-600 text-4xl md:text-5xl border border-neutral-600 rounded-full p-3 cursor-pointer" onClick={goToNextImages} />
+        <FaArrowRight className="text-neutral-400 text-4xl md:text-5xl border border-neutral-600 rounded-full p-3 cursor-pointer" onClick={goToNextImages} />
       </div>
       <Testimonials />
     </div>

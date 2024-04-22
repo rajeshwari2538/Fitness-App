@@ -27,7 +27,7 @@ const Footer = () => {
           <div className='border border-neutral-700 my-2'></div>
           <div className="flex items-center mt-6 text-sm">
             <input type="checkbox" id="privacyPolicy" className="mr-1" />
-            <label htmlFor="privacyPolicy" className='text-neutral-600'>I agree to the <span className='text-white underline'>Privacy Policy.</span></label>
+            <label htmlFor="privacyPolicy" className='text-neutral-400'>I agree to the <span className='text-white underline'>Privacy Policy.</span></label>
           </div>
         </div>
         

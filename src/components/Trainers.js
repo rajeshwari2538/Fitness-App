@@ -31,7 +31,7 @@ const Trainers = () => {
       <div className="mt-20">
         <h2 className="md:text-xl text-white font-semibold mb-6">MEET OUR COACHES</h2>
         <h2 className="text-4xl md:text-7xl font-bold text-white mb-12">Champion Instructors</h2>
-        <p className="text-neutral-600 leading-snug text-lg md:text-xl mb-12">
+        <p className="text-neutral-400 leading-snug text-lg md:text-xl mb-12">
           Renowned in the realm of combat sports, these champions are revered for their expertise as fight instructors and kickboxing trainers. Their illustrious journeys are defined by a mastery of technique, unwavering dedication, and an unyielding spirit. Serving as beacons of inspiration, they impart invaluable knowledge and embody the pinnacle of excellence in the arena, motivating aspiring fighters worldwide to pursue their dreams with passion and determination.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -48,7 +48,7 @@ const Trainers = () => {
                 </div>
               </div>
               <p className="text-white font-bold text-3xl md:text-4xl mt-6">{champion.name}</p>
-              <p className="text-neutral-600 text-xl md:text-2xl mt-1 md:mt-4">{champion.job}</p>
+              <p className="text-neutral-500 text-xl md:text-2xl mt-1 md:mt-4">{champion.job}</p>
             </div>
           ))}
         </div>

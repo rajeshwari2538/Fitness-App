@@ -41,12 +41,12 @@ const Services = () => {
   };
 
   return (
-    <div className="services max-w-6xl mx-auto px-6 -mt-10 md:mt-0 md:px-0">
+    <div className="services max-w-6xl mx-auto px-6 -mt-36 md:mt-0 md:px-0">
       <h2 className="md:text-xl text-white font-bold mb-2">FEATURED SERVICES</h2>
       <div className="">
         <div className='flex flex-col md:flex-row md:items-center'>
           <h3 className="md:text-6xl text-4xl text-white font-bold mb-2 md:mr-8">Our Classes</h3>
-          <p className="text-neutral-600 md:text-xl mt-2 text-lg md:mb-0">Highlights a variety of premium fitness options, ranging from cardio workouts and TRX training to weight lifting, rowing, and indoor cycling classes.</p>
+          <p className="text-neutral-400 md:text-xl mt-2 text-lg md:mb-0">Highlights a variety of premium fitness options, ranging from cardio workouts and TRX training to weight lifting, rowing, and indoor cycling classes.</p>
         </div>
       </div>
       <Slider ref={sliderRef} {...settings}>
@@ -64,7 +64,7 @@ const Services = () => {
         <p className="font-semibold text-white text-md md:text-xl">
           MOTIVATION FOR YOU
         </p>
-        <p className='text-neutral-700 font-bold mt-3 mb-16 text-4xl md:text-7xl'>
+        <p className='text-neutral-500 font-bold mt-3 mb-16 text-4xl md:text-7xl'>
           Strength lies not in what you can do, but in overcoming what you cannot do.
         </p>
       </div>
