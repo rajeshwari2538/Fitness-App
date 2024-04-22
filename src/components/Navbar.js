@@ -21,30 +21,16 @@ const Navbar = () => {
   }, []); 
 
   useEffect(() => {
-    if (showSidebar) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'auto';
-    }
-
-    return () => {
-      document.body.style.overflow = 'auto';
-    };
+    document.body.style.overflow = showSidebar ? 'hidden' : 'auto';
   }, [showSidebar]);
 
-  const toggleSidebar = () => {
-    setShowSidebar(!showSidebar);
-  };
+  const toggleSidebar = () => setShowSidebar(!showSidebar);
 
-  const closeSidebar = () => {
-    setShowSidebar(false);
-  };
+  const closeSidebar = () => setShowSidebar(false);
 
   const handleLinkClick = (link) => {
     setActiveLink(link);
-    if (isMobile) {
-      closeSidebar();
-    }
+    if (isMobile) closeSidebar();
   };
 
   return (
@@ -56,48 +42,39 @@ const Navbar = () => {
         </div>
         {isMobile && (
           <div className="md:hidden">
-            {showSidebar ? (
-              <button onClick={closeSidebar} className="text-zinc-600 mr-10">
-               Close <span className='font-semibold text-white text-lg'>X</span>
-              </button>
-            ) : (
-              <button onClick={toggleSidebar} className="text-white text-2xl mr-5">
-                <GiHamburgerMenu />
-              </button>
-            )}
+            <button onClick={showSidebar ? closeSidebar : toggleSidebar} className="text-white text-xl mr-5">
+              {showSidebar ? 'Close X' : <GiHamburgerMenu />}
+            </button>
           </div>
         )}
         <div className="hidden md:flex flex-grow justify-center items-center space-x-8 text-lg font-semibold">
-          <Link to="/" className={`nav-link ${activeLink === 'home' ? 'active' : ''}`} onClick={() => handleLinkClick('home')}>Home</Link>
-          <Link to="/about" className={`nav-link ${activeLink === 'about' ? 'active' : ''}`} onClick={() => handleLinkClick('about')}>About</Link>
-          <Link to="/gallery" className={`nav-link ${activeLink === 'gallery' ? 'active' : ''}`} onClick={() => handleLinkClick('gallery')}>Gallery</Link>
-          <Link to="/plans" className={`nav-link ${activeLink === 'plans' ? 'active' : ''}`} onClick={() => handleLinkClick('plans')}>Plans</Link>
-          <Link to="/trainers" className={`nav-link ${activeLink === 'trainers' ? 'active' : ''}`} onClick={() => handleLinkClick('trainers')}>Trainers</Link>
-          <a href="#" className={`nav-link ${activeLink === 'contact' ? 'active' : ''} bg-red-600 px-4 py-2 hover:bg-red-500 `} onClick={() => handleLinkClick('contact')}>{isMobile ? 'Contact Us' : 'Find Us'}</a>
+          {['home', 'about', 'gallery', 'plans', 'trainers', 'contact'].map((link) => (
+            <Link
+              key={link}
+              to={link === 'home' ? '/' : `/${link}`}
+              className={`nav-link ${activeLink === link ? 'active' : ''}`}
+              onClick={() => handleLinkClick(link)}
+            >
+              {link.charAt(0).toUpperCase() + link.slice(1)}
+            </Link>
+          ))}
         </div>
       </nav>
       {isMobile && showSidebar && (
-        <div className="fixed top-20 right-0 z-50 bg-zinc-950 text-white w-screen h-screen md:w-64 overflow-y-auto">
+        <div className="fixed top-20 right-0 z-50 bg-neutral-900 text-white w-screen h-screen md:w-64 overflow-y-auto">
           <div className="p-4">
             <ul className="py-4 text-left text-lg font-semibold">
-              <li className="mb-4">
-                <Link to="/" className={`sidebar-nav-link ${activeLink === 'home' ? 'active' : ''}`} onClick={() => handleLinkClick('home')}>Home</Link>
-              </li>
-              <li className="mb-4">
-                <Link to="/about" className={`sidebar-nav-link ${activeLink === 'about' ? 'active' : ''}`} onClick={() => handleLinkClick('about')}>About</Link>
-              </li>
-              <li className="mb-4">
-                <Link to="/gallery" className={`sidebar-nav-link ${activeLink === 'gallery' ? 'active' : ''}`} onClick={() => handleLinkClick('gallery')}>Gallery</Link>
-              </li>
-              <li className="mb-4">
-                <Link to="/plans" className={`sidebar-nav-link ${activeLink === 'plans' ? 'active' : ''}`} onClick={() => handleLinkClick('plans')}>Plans</Link>
-              </li>
-              <li className="mb-4">
-                <Link to="/trainers" className={`sidebar-nav-link ${activeLink === 'trainers' ? 'active' : ''}`} onClick={() => handleLinkClick('trainers')}>Trainers</Link>
-              </li>
-              <li className="mb-4">
-                <a href="#" className={`sidebar-nav-link ${activeLink === 'contact' ? 'active' : ''}`} onClick={() => handleLinkClick('contact')}>{isMobile ? 'Contact Us' : 'Find Us'}</a>
-              </li>
+              {['home', 'about', 'gallery', 'plans', 'trainers', 'Contact'].map((link) => (
+                <li key={link} className="mb-4">
+                  <Link
+                    to={link === 'home' ? '/' : `/${link}`}
+                    className={`sidebar-nav-link ${activeLink === link ? 'active' : ''}`}
+                    onClick={() => handleLinkClick(link)}
+                  >
+                    {link.charAt(0).toUpperCase() + link.slice(1)}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
