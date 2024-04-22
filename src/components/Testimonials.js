@@ -34,7 +34,7 @@ const Testimonials = () => {
           </div>
         </div>
 
-        <div className="mt-6 flex flex-col mr-[70%] md:mr-0 md:flex-row md:items-center md:mt-0">
+        <div className="mt-6 flex flex-col mr-[50%] md:mr-0 md:flex-row md:items-center md:mt-0">
           {testimonialsData.map((testimonial) => (
             <div key={testimonial.id} className="inline-block md:mr-8 relative" style={{ textAlign: 'center' }}>
               <div className="testimonial-container relative">
