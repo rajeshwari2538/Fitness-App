@@ -10,8 +10,8 @@ const Footer = () => {
         });
       };
   return (
-    <footer className="max-w-6xl md:h-[40rem] mx-auto bg-neutral-900 text-white md:mt-24 mt-16 py-10">
-      <div className="container mt-20 mx-auto -ml-14 md:ml-0 flex flex-col justify-between items-center">
+    <footer className="max-w-6xl md:h-[40rem] mx-auto bg-neutral-900 text-white md:mt-24 mt-0 py-10">
+      <div className="container mt-20 mx-auto -ml-5 md:ml-0 flex flex-col justify-between items-center">
         
         <div className="flex flex-col -ml-5 md:ml-0 md:flex-row justify-between text-center md:text-left mb-4 md:mb-0">
           <h2 className="md:text-4xl text-2xl text-left font-bold md:ml-20">FitClub</h2>

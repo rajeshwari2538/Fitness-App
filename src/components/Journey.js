@@ -19,7 +19,7 @@ const Journey = () => {
   }, []);
 
   return (
-    <div className="max-w-6xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+    <div className="max-w-6xl mx-auto py-12 px-4 -mt-14 md:mt-0 sm:px-6 lg:px-8">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="flex items-center justify-center md:justify-end">
           <img src={Image} alt="Discover the FitFlex" className="max-w-full md:h-auto h-[550px] w-full" />

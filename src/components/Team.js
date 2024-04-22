@@ -18,7 +18,7 @@ const Team = () => {
   };
 
   return (
-    <div className="max-w-6xl cursor-pointer mt-20 mx-auto py-12 px-4 sm:px-6 lg:px-8">
+    <div className="max-w-6xl cursor-pointer mt-6 md:mt-20 mx-auto py-12 px-4 sm:px-6 lg:px-8">
       <div className="grid md:grid-cols-4 grid-cols-2 md:gap-4">
         {[...firstRow, ...secondRow].map((trainer, index) => (
           <div key={index} className="relative col-span-1">
@@ -36,7 +36,7 @@ const Team = () => {
             </div>
           </div>
         ))}
-        <div className="md:mt-16 mt-10 ml-36 md:ml-44 col-span-2">
+        <div className="md:mt-16 mt-10 ml-28 md:ml-44 col-span-2">
           <Link to="/trainers">
             <button className="border border-neutral-700 hover:text-red-500 hover:border-red-500 text-white font-semibold py-16 px-7 md:py-20 text-2xl md:px-12 rounded-full">Our Team</button>
           </Link>
