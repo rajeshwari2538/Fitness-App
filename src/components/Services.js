@@ -41,7 +41,7 @@ const Services = () => {
   };
 
   return (
-    <div className="services max-w-6xl mx-auto px-6 -mt-36 md:mt-0 md:px-0">
+    <div className="services max-w-6xl mx-auto px-6 -mt-32 md:mt-0 md:px-0">
       <h2 className="md:text-xl text-white font-bold mb-2">FEATURED SERVICES</h2>
       <div className="">
         <div className='flex flex-col md:flex-row md:items-center'>
