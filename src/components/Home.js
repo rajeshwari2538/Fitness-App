@@ -38,7 +38,7 @@ const Home = () => {
   };
 
   return (
-    <div className={`max-w-6xl mx-auto ${isSmallDevice ? '-mt-[60%]' : 'mt-[10%] md:-mt-10'} flex justify-between items-center h-screen`}>
+    <div className={`max-w-6xl mx-auto ${isSmallDevice ? '-mt-[80%]' : 'mt-[10%] md:-mt-10'} flex justify-between items-center h-screen`}>
       <div className="flex flex-col md:flex-row justify-center items-start w-full">
         <div className="flex flex-col items-center md:mr-10">
           {homeData.map((image, index) => (
