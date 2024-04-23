@@ -8,6 +8,7 @@ import About from './components/About';
 import Gallery from "./components/Gallery"
 import Plans from "./components/Plans"
 import Trainers from "./components/Trainers"
+import Contact from "./components/Contact"
 
 
 const appRouter = createBrowserRouter([
@@ -34,6 +35,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/trainers",
         element: <Trainers />
+      },
+      {
+        path: "/contact",
+        element: <Contact />
       },
     ]
   }
