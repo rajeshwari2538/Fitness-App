@@ -48,7 +48,7 @@ const Footer = () => {
           </div>
           <div className="md:text-center mt-4 md:mt-0 flex flex-col">
             <h3 className="md:text-2xl text-xl md:ml-0 font-bold mb-2">Say Hello</h3>
-            <a href="mailto:info@example.com" className="text-gray-400 md:text-lg hover:text-white">info@example.com</a>
+            <a href="mailto:info@example.com" className="text-gray-400 md:text-lg hover:text-white">info@fitclub.com</a>
           </div>
         </div>
       </div>

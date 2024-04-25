@@ -16,6 +16,12 @@ const Team = () => {
       </a>
     );
   };
+  const handleLinkClick = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
 
   return (
     <div className="max-w-6xl cursor-pointer mt-6 md:mt-20 mx-auto py-12 px-4 sm:px-6 lg:px-8">
@@ -37,7 +43,7 @@ const Team = () => {
           </div>
         ))}
         <div className="md:mt-16 mt-10 ml-28 md:ml-44 col-span-2">
-          <Link to="/trainers">
+          <Link to="/trainers" onClick={handleLinkClick}>
             <button className="border border-neutral-700 hover:text-red-500 hover:border-red-500 text-white font-semibold py-16 px-7 md:py-20 text-2xl md:px-12 rounded-full">Our Team</button>
           </Link>
         </div>

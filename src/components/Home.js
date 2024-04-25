@@ -38,7 +38,7 @@ const Home = () => {
   };
 
   return (
-    <div className={`max-w-6xl mx-auto ${isSmallDevice ? '-mt-[20rem]' : 'mt-[10%] md:-mt-10'} flex justify-between items-center h-screen`}>
+    <div className={`max-w-6xl mx-auto ${isSmallDevice ? '-mt-[25rem]' : 'mt-[10%] md:-mt-10'} flex justify-between items-center h-screen`}>
       <div className="flex flex-col md:flex-row justify-center items-start w-full">
         <div className="flex flex-col items-center md:mr-10">
           {homeData.map((image, index) => (
@@ -62,7 +62,7 @@ const Home = () => {
                 style={{ display: index === currentImage ? 'block' : 'none' }}
               />
             ))}
-            <h1 key={titleAnimationKey} className={`absolute -bottom-16 left-4 md:top-10 md:left-[75%] text-3xl md:text-9xl text-white font-bold font-mono z-10 animated-title ${isSmallDevice ? 'mt-4 text-center w-full' : ''}`} style={{ lineHeight: isSmallDevice ? '1' : '0.9', maxWidth: isSmallDevice ? '250px' : 'none' }}>{title}</h1>
+            <h1 key={titleAnimationKey} className={`absolute -bottom-16 -left-[4.2rem] md:top-10 md:left-[75%] text-3xl md:text-9xl text-white font-bold font-mono z-10 animated-title ${isSmallDevice ? 'mt-4 text-center w-full' : ''}`} style={{ lineHeight: isSmallDevice ? '1' : '0.9', maxWidth: isSmallDevice ? '' : 'none' }}>{title}</h1>
           </div>
           <div className="description-container ml-6 mt-12 md:mt-[23rem]">
             <p className={`text-neutral-400 text-lg md:text-xl ${isSmallDevice ? 'hidden' : 'block'}`}>{homeData[currentImage].description}</p>
